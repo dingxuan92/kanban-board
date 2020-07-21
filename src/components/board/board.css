@@ -1,0 +1,11 @@
+.board {
+
+}
+
+.board .header {
+  text-align: center;
+}
+
+.board .stages {
+  display: flex;
+}

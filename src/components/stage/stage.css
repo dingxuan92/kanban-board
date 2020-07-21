@@ -1,0 +1,5 @@
+.stage {
+  display: flex;
+  flex-direction: column;
+
+}

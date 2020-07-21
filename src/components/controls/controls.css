@@ -1,0 +1,18 @@
+.controls {
+  background-color: #E0FFFF;
+  height: 150px;
+}
+
+.controls .buttons {
+  margin: 0px 10px;
+}
+
+.controls .header {
+  text-align: center;
+}
+
+.controls .control-buttons {
+  margin-top: 15px;
+  padding: 10px;
+
+}

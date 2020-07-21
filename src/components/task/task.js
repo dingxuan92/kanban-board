@@ -1,4 +1,5 @@
 import React from 'react';
+import './task.css';
 
 const taskNameToId = name => {
   return `task-${name}`;
@@ -6,10 +7,11 @@ const taskNameToId = name => {
 
 const Task = ({ name }) => {
   return (
-    <div     
+    <div
       data-testid={taskNameToId(name)}
     >
-     
+
+
     </div>
   );
 }
