@@ -10,6 +10,7 @@ const Task = ({ name }) => {
     <div
       data-testid={taskNameToId(name)}
     >
+    <h4>{name}</h4>
 
 
     </div>

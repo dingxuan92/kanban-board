@@ -14,7 +14,7 @@ const Board = ({ stagesNames, stagesTasks }) => {
       {
         stagesNames && stagesNames.map((stage, index) => {
           return (
-            <Stage name={stagesNames[index]} stageId={index}/>
+            <Stage name={stagesNames[index]} stageId={index} tasks={stagesTasks[`stage-${index}`]}/>
           )
         })
       }

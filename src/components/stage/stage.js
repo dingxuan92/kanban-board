@@ -9,6 +9,11 @@ const Stage = ({ name, stageId, tasks }) => {
       className="stage"
       data-testid={`stage-${stageId}`}>
       <h2>{name}</h2>
+      {
+        tasks && tasks.map((item, index) => {
+          return <Task name={item.name}/>
+        })
+      }
 
 
     </div>

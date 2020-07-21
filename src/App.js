@@ -17,10 +17,6 @@ class App extends Component {
             "name": "task 0"
           },
           {
-            "data-testid": "task-task0",
-            "name": "task 0"
-          },
-          {
             "data-testid": "task-task1",
             "name": "task 1"
           },
@@ -68,11 +64,30 @@ class App extends Component {
     this.stagesNames = ['Backlog', 'To Do', 'Ongoing', 'Done'];
   }
 
+  //no time to implement these methods :'(
+
+  add() {
+    const prevState = Object.assign(this.state.stagesTasks);
+
+    this.setState()
+
+  }
+
+  moveForward() {
+
+  }
+
+  moveBackward() {
+
+  }
+
+  delete() {
+
+  }
+
   render() {
-
-
     return (
-      <div className="App">
+      <div className="App" add={(id, value) => this.add(id, value)} moveForward={() => this.moveForward()} moveBackward={() => this.moveBackward()} delete={() => this.delete()}>
         <Controls />
         <Board stagesNames={this.stagesNames} stagesTasks={this.state.stagesTasks}/>
       </div>
