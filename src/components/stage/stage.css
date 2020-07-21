@@ -1,5 +1,9 @@
 .stage {
   display: flex;
   flex-direction: column;
+  padding: 20px;
+  margin-right: 50px;
+  width: 100%;
+  background-color: #F0F0F0;
 
 }
