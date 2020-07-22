@@ -23,8 +23,8 @@ const Controls = ({addTask, moveForward, moveBackward, deleteTask, selectedTask}
         <button type="button" className="buttons" onClick={(e) => clickAddTaskButton(e)}>Create</button>
         <div>
           <input style={{ marginTop: "10px"}} placeholder="Click on an existing task" value={selectedTask ? selectedTask.name : ""} readOnly></input>
-          <button type="button" className="buttons" onClick={() => moveBackward()}>Move back</button>
-          <button type="button" className="buttons" onClick={() => moveForward()}>Move forward</button>
+          <button type="button" className="buttons" disabled={selectedTask && selectedTask.stageId == 0} onClick={() => moveBackward()}>Move back</button>
+          <button type="button" className="buttons" disabled={selectedTask && selectedTask.stageId == 3} onClick={() => moveForward()}>Move forward</button>
           <button type="button" className="buttons" onClick={() => deleteTask()}>Delete</button>
         </div>
       </div>
