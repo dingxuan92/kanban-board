@@ -5,14 +5,14 @@ const taskNameToId = name => {
   return `task-${name}`;
 }
 
-const Task = ({ name }) => {
+const Task = ({ name, clickTask }) => {
   return (
     <div
       data-testid={taskNameToId(name)}
+      className="task"
+      onClick={(e) => clickTask(e)}
     >
-    <h4>{name}</h4>
-
-
+      {name}
     </div>
   );
 }

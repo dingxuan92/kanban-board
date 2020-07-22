@@ -59,37 +59,82 @@ class App extends Component {
             "name": "task 9"
           }
         ]
-      }
+      },
     };
     this.stagesNames = ['Backlog', 'To Do', 'Ongoing', 'Done'];
   }
 
   //no time to implement these methods :'(
 
-  add() {
-    const prevState = Object.assign(this.state.stagesTasks);
-
-    this.setState()
-
+  addTask(value) {
+    if(value === "") return;
+    const prevState = Object.assign({}, this.state.stagesTasks);
+    prevState["stage-0"].push({
+      "data-testid": `task-${value}`,
+      "name": value
+    })
+    this.setState(prevState);
   }
 
   moveForward() {
-
+    const selectedTask = this.state.selectedTask;
+    console.log(selectedTask);
+    if(selectedTask && selectedTask.stageId < 3) {
+      const prevState = Object.assign({}, this.state.stagesTasks);
+      prevState[`stage-${selectedTask.stageId}`] = prevState[`stage-${selectedTask.stageId}`].filter(item => {
+        return item.name !== selectedTask.name;
+      })
+      const newSelectedTask = {
+        "name": selectedTask.name,
+        "stageId": selectedTask.stageId + 1
+      }
+      prevState[`stage-${selectedTask.stageId + 1}`].push({
+        "data-testid": `task-${selectedTask.name}`,
+        "name": selectedTask.name
+      })
+      this.setState({stagesTasks: prevState, selectedTask: newSelectedTask});
+      console.log({stagesTasks: prevState, selectedTask: newSelectedTask});
+    }
   }
 
   moveBackward() {
-
+    const selectedTask = this.state.selectedTask;
+    if(selectedTask && selectedTask.stageId > 0) {
+      const prevState = Object.assign({}, this.state.stagesTasks);
+      prevState[`stage-${selectedTask.stageId}`] = prevState[`stage-${selectedTask.stageId}`].filter(item => {
+        return item.name !== selectedTask.name;
+      })
+      const newSelectedTask = {
+        "name": selectedTask.name,
+        "stageId": selectedTask.stageId - 1
+      }
+      prevState[`stage-${selectedTask.stageId - 1}`].push({
+        "data-testid": `task-${selectedTask.name}`,
+        "name": selectedTask.name
+      })
+      this.setState({stagesTasks: prevState, selectedTask: newSelectedTask});
+    }
   }
 
-  delete() {
+  deleteTask() {
+    const selectedTask = this.state.selectedTask;
+    const prevState = Object.assign({}, this.state.stagesTasks);
+    prevState[`stage-${selectedTask.stageId}`] = prevState[`stage-${selectedTask.stageId}`].filter(item => {
+      return item.name !== selectedTask.name;
+    })
+    this.setState({stagesTasks: prevState, selectedTask: null});
+  }
 
+  clickTask(e, stageId) {
+    this.setState({selectedTask: {name: e.target.innerHTML, stageId: stageId}})
+    console.log(stageId);
   }
 
   render() {
     return (
-      <div className="App" add={(id, value) => this.add(id, value)} moveForward={() => this.moveForward()} moveBackward={() => this.moveBackward()} delete={() => this.delete()}>
-        <Controls />
-        <Board stagesNames={this.stagesNames} stagesTasks={this.state.stagesTasks}/>
+      <div className="App">
+        <Controls selectedTask={this.state.selectedTask} addTask={(value) => this.addTask(value)} moveForward={() => this.moveForward()} moveBackward={() => this.moveBackward()} deleteTask={() => this.deleteTask()}/>
+        <Board stagesNames={this.stagesNames} stagesTasks={this.state.stagesTasks} clickTask={(e, stageId) => this.clickTask(e, stageId)}/>
       </div>
     );
   }

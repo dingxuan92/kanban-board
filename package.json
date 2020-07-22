@@ -7,8 +7,8 @@
     "create-react-app": "^1.4.3",
     "jest-dom": "^3.5.0",
     "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "react-scripts": "1.0.17",
     "save": "^2.3.1"
   },
