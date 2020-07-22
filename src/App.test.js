@@ -21,7 +21,7 @@ const testIds = {
 const stageNames = ["Backlog", "To Do", "Ongoing", "Done"];
 
 const taskNameToId = name => {
-  return `task-${name.split(' ').join('-')}`;
+  return `task-${name}`;
 }
 
 const predefinedTasks = {
@@ -326,4 +326,3 @@ test('Move backward an item till the first state and should disable the move bac
   expect(firstStage).not.toContainElement(queryByTestId(taskNameToId('task 9')));
   expect(lastStage).toContainElement(queryByTestId(taskNameToId('task 9')));
 });
-
