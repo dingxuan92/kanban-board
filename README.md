@@ -27,3 +27,11 @@ Click on the task, the task name will be populated into the input field. Click o
 Click on the task, the task name will be populated into the input field. Click on move backward button to move the task to the previous stage.
 
 ![Alt Text](https://github.com/dingxuan92/kanban-board/blob/master/demo/movebackward.gif)
+
+### How to run the project
+
+#### npm start
+Run the project and visit localhost:8000
+
+#### npm run test
+This will run tests. In total there are 11 test cases
