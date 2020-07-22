@@ -21,6 +21,7 @@ const testIds = {
 const stageNames = ["Backlog", "To Do", "Ongoing", "Done"];
 
 const taskNameToId = name => {
+  // return `task-${name.split(' ').join('-')}`;
   return `task-${name}`;
 }
 

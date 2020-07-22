@@ -1,0 +1,26 @@
+<testsuites name="jest tests" tests="11" failures="0" time="1.824">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2020-07-22T04:06:37" time="1.824" tests="11">
+    <testcase classname=" Clicking on any card should display the name in textbox" name=" Clicking on any card should display the name in textbox" time="0.095">
+    </testcase>
+    <testcase classname=" Once the card selected based on the current stage able move forward and backward" name=" Once the card selected based on the current stage able move forward and backward" time="0.056">
+    </testcase>
+    <testcase classname=" If the card/task selected from the 1st stage should disable the &quot;Move backward&quot; button." name=" If the card/task selected from the 1st stage should disable the &quot;Move backward&quot; button." time="0.043">
+    </testcase>
+    <testcase classname=" If the card/task selected from the last stage should disable the &quot;Move forward&quot; button." name=" If the card/task selected from the last stage should disable the &quot;Move forward&quot; button." time="0.041">
+    </testcase>
+    <testcase classname=" After selecting task from 2nd stage and clicking on Move forward button move the card to 3rd stage." name=" After selecting task from 2nd stage and clicking on Move forward button move the card to 3rd stage." time="0.053">
+    </testcase>
+    <testcase classname=" After selecting task from 2nd stage and clicking on Move backward button move the card to 1st stage." name=" After selecting task from 2nd stage and clicking on Move backward button move the card to 1st stage." time="0.046">
+    </testcase>
+    <testcase classname=" Once the card selected and clicking on  Delete button should remove the card from board." name=" Once the card selected and clicking on  Delete button should remove the card from board." time="0.047">
+    </testcase>
+    <testcase classname=" Clicking on &quot;Add card&quot; button should add one card in first stage and able move forward and backward. " name=" Clicking on &quot;Add card&quot; button should add one card in first stage and able move forward and backward. " time="0.019">
+    </testcase>
+    <testcase classname=" Clicking on &quot;Add card&quot; button without any input should not affect anything" name=" Clicking on &quot;Add card&quot; button without any input should not affect anything" time="0.004">
+    </testcase>
+    <testcase classname=" Move forward an item till the last state and should disable the move forward button" name=" Move forward an item till the last state and should disable the move forward button" time="0.051">
+    </testcase>
+    <testcase classname=" Move backward an item till the first state and should disable the move backward button" name=" Move backward an item till the first state and should disable the move backward button" time="0.051">
+    </testcase>
+  </testsuite>
+</testsuites>
