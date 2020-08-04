@@ -1,9 +1,9 @@
-import React from 'react';
-import './task.css';
+import React from "react";
+import "./task.css";
 
-const taskNameToId = name => {
+const taskNameToId = (name) => {
   return `task-${name}`;
-}
+};
 
 const Task = ({ name, clickTask }) => {
   return (
@@ -15,6 +15,6 @@ const Task = ({ name, clickTask }) => {
       {name}
     </div>
   );
-}
+};
 
 export default Task;

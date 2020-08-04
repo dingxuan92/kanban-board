@@ -1,7 +1,7 @@
-import React from 'react';
-import './board.css';
+import React from "react";
+import "./board.css";
 
-import Stage from '../stage/stage';
+import Stage from "../stage/stage";
 
 const Board = ({ stagesNames, stagesTasks, clickTask }) => {
   console.log(stagesNames);
@@ -11,16 +11,21 @@ const Board = ({ stagesNames, stagesTasks, clickTask }) => {
         <h1>Kanban board</h1>
       </div>
       <div className="stages">
-      {
-        stagesNames && stagesNames.map((stage, index) => {
-          return (
-            <Stage key={index} name={stagesNames[index]} stageId={index} tasks={stagesTasks[`stage-${index}`]} clickTask={(e, stageId) => clickTask(e, stageId)}/>
-          )
-        })
-      }
+        {stagesNames &&
+          stagesNames.map((stage, index) => {
+            return (
+              <Stage
+                key={index}
+                name={stagesNames[index]}
+                stageId={index}
+                tasks={stagesTasks[`stage-${index}`]}
+                clickTask={(e, stageId) => clickTask(e, stageId)}
+              />
+            );
+          })}
       </div>
     </div>
   );
-}
+};
 
 export default Board;

@@ -18,7 +18,7 @@ Click on the task, the task name will be populated into the input field. Click o
 
 ## Move Task forward to next Stage
 
-Click on the task, the task name will be populated into the input field. Click on move forward button to move the task to the next stage. 
+Click on the task, the task name will be populated into the input field. Click on move forward button to move the task to the next stage.
 
 ![Alt Text](https://github.com/dingxuan92/kanban-board/blob/master/demo/moveforward.gif)
 
