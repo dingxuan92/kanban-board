@@ -21,7 +21,7 @@
     "chai": "^4.1.2",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
-    "expect": "^21.2.1",
+    "expect": "^29.4.1",
     "jest-junit": "^3.3.0",
     "prettier": "2.0.5",
     "react-test-renderer": "^16.2.0"
